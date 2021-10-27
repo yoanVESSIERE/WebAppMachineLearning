@@ -44,8 +44,8 @@ with col2:
     st.header('Prediction')
 
     sex = st.selectbox(
-        'Are you a man or a woman ?',
-        ('Male', 'Woman')
+        'What is your gender ?',
+        ('Male', 'Female')
     )
 
     age = st.number_input('How old are you ?', min_value=0, value=20)
