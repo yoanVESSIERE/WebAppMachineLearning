@@ -89,4 +89,9 @@ if (button):
     y_pred = Y_predict
     score = r2_score(y_true, y_pred)
 
-    st.markdown("The Machine Learning predict a health bill of **" + str(format(prediction, '.2f')) + " $** with a R2 score of **" + str(score) + "** /1")
+    if prediction < 0:
+        st.markdown("The Machine Learning predict a health bill between **0 and 500 $**, congratulation !!")
+        st.markdown("This result could not be more precise since you're a healthy person !")
+        st.markdown("With a R2 score of **" + str(score) + "** /1")
+    else:
+        st.markdown("The Machine Learning predict a health bill of **" + str(format(formated_pred, '.2f')) + " $** with a R2 score of **" + str(score) + "** /1")
