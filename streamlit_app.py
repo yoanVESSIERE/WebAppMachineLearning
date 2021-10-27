@@ -94,4 +94,4 @@ if (button):
         st.markdown("This result could not be more precise since you're a healthy person !")
         st.markdown("With a R2 score of **" + str(score) + "** /1")
     else:
-        st.markdown("The Machine Learning predict a health bill of **" + str(format(formated_pred, '.2f')) + " $** with a R2 score of **" + str(score) + "** /1")
+        st.markdown("The Machine Learning predict a health bill of **" + str(format(prediction, '.2f')) + " $** with a R2 score of **" + str(score) + "** /1")
